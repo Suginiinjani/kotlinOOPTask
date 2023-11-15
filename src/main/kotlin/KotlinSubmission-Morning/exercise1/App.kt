@@ -1,5 +1,7 @@
 package id.infinitelearning.KotlinSubmission.exercise1
 
+import com.sun.org.apache.xpath.internal.operations.Bool
+
 /**
 Latihan 1
 Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan dibawah ini:
@@ -10,7 +12,13 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
 fun myProfile() {
+    val first: String = "Sugini"
+    val last: String = "Injani"
+    var age: Number = 21
+    var statuss: Boolean = true
 
+    println("Halo kakak mentor! perkenalkan nama saya $first $last")
+    println("Saya berumur $age dan status saya sudah ${if(statuss) "taken" else "single"}")
 }
 
 
@@ -19,7 +27,8 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
-    return ""
+    var codeSmiths = "Grup merge $groupId, dengan member ${groupMember.joinToString(", ")} dari sesi $session"
+    return codeSmiths
 }
 
 /**
@@ -29,8 +38,19 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  *
  */
 fun myTeam(): List<Any> {
-
-    return listOf()
+    val memCSmith: List<String> = listOf(
+        "Putra Ganda D",
+        "Sugini Injani",
+        "Dewangga Nanda A",
+        "Novia Indah R",
+        "Abdul Malik",
+        "Revon Anandiya",
+        "Nabilah Rahmah",
+        "Alexandro",
+        "Vina Damayanti",
+        "M. Faiz")
+    var gege = memCSmith[1]
+    return listOf(gege)
 }
 
 /**
@@ -41,10 +61,27 @@ fun myTeam(): List<Any> {
  *
  */
 fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
+    val mentor = arrayOf<String>(
+        "Shania",
+        "Kelvin",
+        "Iffan"
+    )
+    val countOfGroup = arrayOf<String>(
+        "Putra Ganda D",
+        "Sugini Injani",
+        "Dewangga Nanda A",
+        "Novia Indah R",
+        "Abdul Malik",
+        "Revon Anandiya",
+        "Nabilah Rahmah",
+        "Alexandro",
+        "Vina Damayanti",
+        "M. Faiz"
+    )
 
-    return 0
+    val sum = mentor.size + countOfGroup.size
+
+    return sum
 }
 
 fun main() {
@@ -62,6 +99,16 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("", listOf(), "")
+    groupDetail("13", listOf(
+        "Putra Ganda D",
+        "Sugini Injani",
+        "Dewangga Nanda A",
+        "Novia Indah R",
+        "Abdul Malik",
+        "Revon Anandiya",
+        "Nabilah Rahmah",
+        "Alexandro",
+        "Vina Damayanti",
+        "M. Faiz"), "Morning")
 
 }
