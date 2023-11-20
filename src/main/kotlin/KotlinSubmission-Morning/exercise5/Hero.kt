@@ -28,10 +28,40 @@ class Hero {
         }
     }
 
-    fun jalan() {
+    fun jalan(amount: Int) {
         checkHealth()
         println("$name sedang berjalan...")
         health -= 1
+    }
+
+    fun lari(amount: Int) {
+        checkHealth()
+        println("$name sedang berlari...")
+        health -= -2
+    }
+
+    fun  makan(amount: Int) {
+        checkHealth()
+        println("$name sedang makan...")
+        health += 2
+    }
+
+    fun  minum(amount: Int) {
+        checkHealth()
+        println("$name sedang minum...")
+        health += 2
+    }
+
+    fun  lompat(amount: Int) {
+        checkHealth()
+        println("$name sedang lompat...")
+        health -= -2
+    }
+
+    fun  duduk(amount: Int) {
+        checkHealth()
+        println("$name sedang duduk...")
+        health +1
     }
 
 
